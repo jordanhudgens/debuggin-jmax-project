@@ -1,4 +1,5 @@
 class InvoicesController < ApplicationController
+  respond_to :html, :xml, :json
   before_action :set_invoice, only: [:show, :edit, :update, :destroy]
 
   # GET /invoices
