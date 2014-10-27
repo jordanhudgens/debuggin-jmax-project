@@ -3,7 +3,9 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
+    
     @companies = Company.all
+    
     
     respond_to do |format|
       format.html
