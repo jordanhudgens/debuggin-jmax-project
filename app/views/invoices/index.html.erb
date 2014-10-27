@@ -42,3 +42,13 @@
 <br>
 
 <%= link_to 'New Invoice', new_invoice_path %>
+
+<h3> Import Companies </h3> 
+  <%= form_tag import_companies_path, multipart: true do %>
+    <%= file_field_tag :file %>
+<%= submit_tag "Upload Invoices",  class: 'btn btn-default' %>
+  <% end %>
+
+<h3> Export Companies </h3>
+<%= link_to "Download Invoices", invoices_path(format: "csv"), class: 'btn btn-default' %>
+<br />

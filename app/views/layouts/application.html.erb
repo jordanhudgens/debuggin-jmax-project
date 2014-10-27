@@ -16,6 +16,7 @@
     <li><%= link_to "Portfolio", welcome_portfolio_path %>
     <li><%= link_to "Resume", welcome_resume_path %></li>
     <li><%= link_to "Invoices", invoices_path %></li>
+    <li><%= link_to "Companies", companies_path %></li>
     
     <% if current_user %>
     <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>

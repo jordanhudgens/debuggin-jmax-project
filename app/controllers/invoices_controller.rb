@@ -7,6 +7,11 @@ class InvoicesController < ApplicationController
   def index
     @search = InvoiceSearch.new(params[:search])
     @invoices = @search.scope
+    
+    respond_to do |format|
+      format.html
+      format.csv { render text: @invoices.to_csv }
+    end
   end
 
   # GET /invoices/1
