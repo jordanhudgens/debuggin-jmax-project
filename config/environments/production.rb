@@ -1,5 +1,15 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  config.action_mailer.default_url_options = { :host => 'www.jdmdev.net' }
+ActionMailer::Base.smtp_settings = {
+  :address        => "smtp.sendgrid.net",
+  :port           => "25",
+  :authentication => :plain,
+  :user_name      => ENV['app31014060@heroku.com'],
+  :password       => ENV['S0uthern'],
+  :domain         => ENV['jdmdev.net']
+}
 
   # Code is not reloaded between requests.
   config.cache_classes = true
