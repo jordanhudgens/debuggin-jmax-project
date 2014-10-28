@@ -8,7 +8,7 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :user_name      => ENV['app31014060@heroku.com'],
   :password       => ENV['S0uthern'],
-  :domain         => ENV['jdmdev.net']
+  :domain         => ENV['heroku.com']
 }
 
   # Code is not reloaded between requests.
