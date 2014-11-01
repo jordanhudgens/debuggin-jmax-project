@@ -1,4 +1,5 @@
 class Invoice < ActiveRecord::Base
+  belongs_to :salesperson
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
       Company.create! row.to_hash

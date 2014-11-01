@@ -1,9 +1,10 @@
 class EmployeesController < ApplicationController
+  respond_to :html, :xml, :json
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   def index
     @employees = Employee.all
-    respond_with(@employees)
+     respond_with(@employees)
   end
 
   def show
