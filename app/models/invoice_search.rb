@@ -3,7 +3,7 @@ class InvoiceSearch
   
   def initialize(params)
     params ||= {}
-    @date_from = parsed_date(params[:date_from], 7.days.ago.to_date.to_s)
+    @date_from = parsed_date(params[:date_from], 1.year.ago.to_date.to_s)
     @date_to = parsed_date(params[:date_to], 1.days.from_now.to_date.to_s)
   end
   
